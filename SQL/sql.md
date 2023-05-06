@@ -1,7 +1,9 @@
 # SQL基础  
 
 [查询数据库](#查库)  
-[查询表中的列](#查列)
+[查询表中的列](#查列)  
+[数据类型](#数据类型)  
+[函数](#函数)
 
 ## 基础查询
 
@@ -99,14 +101,93 @@ from之后，order之前
 当where过滤中含有NULL(空值)时，可以用IFNULL函数  
 具体使用方式就是IFNULL(列,给空值赋值)，这样就是可以显示出被过滤出来的空值  
 注:IFNULL中赋值并不会直接给NULL赋值，而是赋予过滤的值，所以并不用担心NULL的值被改  
-```select * from [表名] where IFNULL(列名,值) 判断 值```  
+```select * from [表名] where IFNULL(列名,值) 判断 值;```  
 
 - [数值过滤]  
 [前置] where ... between ... and ...;  
-指定数值在某两个值之间:where [列] between [前端值] and [后端值]  
+指定数值在某两个值之间:where [列] between [前端值] and [后端值];  
 - [空值过滤]  
 [前置] where [列] is NULL;  
 判断列为空值  
 - [非空值过滤]  
-[前置] where [列] is not null;
+[前置] where [列] is not null;  
 判断列不为空值
+
+[模糊查询]  
+通配符-下划线  
+单个或任何字符： WHERE [] link '..._...';
+
+通配符-百分号  
+任意数目(包括0个)，任何字符： WHERE [] LINK '...%...';
+
+[过滤条件]  
+"且"操作  
+两个或多个条件，同时满足：WHERE [条件1] AND [条件2] AND ...;
+
+"或"操作  
+两个或多个条件，至少满足一个：WHERE [条件1] OR [条件2] OR ...;
+
+组合操作  
+多个条件，不同要求：WHERE [条件1] AND [条件2] OR [条件3] ...;
+
+取值限制  
+明确而不连续的取值：WHERE [] IN (值1, 值2, ...);  
+过滤的值明确但是不是连续范围
+
+否定条件  
+否定过滤条件：WHERE NOT [条件1];  
+否定一个或者多个过滤条件，不能单独使用，类似补集的概念  
+not跟在AND后是并集，OR则为交集
+
+### 数据类型
+
+**[integer]**  
+整数类型，只存储整数
+
+**[demical]**  
+定点型，储存固定位数的小数
+
+**[float/double/real]**  
+浮点型，存储不固定位数的小数
+
+**[char]**  
+定长字符串
+
+**[varchar]**  
+可变长字符串
+
+**[date/time/datetime]**  
+date: Y-M-D(年-月-日)  
+time：H:I:S(时-分-秒)  
+datetime：Y-M-D H:I:S
+
+### 函数
+
+**在不同编码格式会有不同，建议先测试**  
+注：单独使用时前面要加 SELECT
+
+|函数       |作用        |实例                                |
+|-----------|-----------|------------------------------------|
+|abs        |绝对值函数  |abs(-3) = 3                         |
+|sqrt       |平方根函数  |sqrt(4) = 2                         |
+|exp        |指数函数    |exp(4) = e ^ 4                      |
+|round      |四舍五入函数|round(1.1234,2) = 1.12              |
+|pi         |圆周率函数  |pi() = π                            |
+|char_length|字符长度    |char_length('数据') = 2             |
+|length     |字节数      |length('数据') = 6                  |
+|RTRIM      |去除右边空值|RTRIM(' al') = 'al'                 |
+|LTRIM      |去除左边空值|LTRIM('al ') = 'al'                 |
+|UPPER      |大写字母转换|UPPER('al') = 'AL'                  |
+|LOWER      |小写字母转换|LOWER('AL') = 'al'                  |
+|YEAR       |获取具体年份|YEAR('2023-1-5') = '2023'           |
+|MONTH      |获取具体月份|MONTH('2023-1-5') = 1               |
+|DAY        |获取具体日期|DAY('2023-1-5') = 5                 |
+|HOUR       |获取具体小时|HOUR('10:15:27') = 10               |
+|MINUTE     |获取具体分钟|MINUTE('10:15:27') = 15             |
+|SECOND     |获取具体秒钟|SECOND('10:15:27') = 27             |
+|MONTHNAME  |获取月份名称|MONTHNAME('2023-1-1') = 'JAN'       |
+|NOW        |获取当前天时|NOW() = systime                     |
+|CURDATE    |获取当前日期|CURDATE() = '2023-5-6'              |
+|CURTIME    |获取当前时间|CURTIME() = '10:35:24'              |
+|DATE_ADD   |时间增加   |DATE_ADD('20230506',INTERVAL 1 Y/M/D)|
+|DATE_SUB   |时间减少   |DATE_SUB('20230506',INTERVAL 1 Y/M/D)|
