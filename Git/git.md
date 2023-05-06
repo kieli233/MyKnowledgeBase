@@ -2,11 +2,11 @@
 
 ## 初始化
 
-```git config --global user.name "<用户名>"```
+```git config --global user.name "<用户名>"```  
 这个配置是写你用户名，不过一般写名字的话还是写你代码托管网站的用户名字
 这里写不写都可以，但是代码提交容易出问题。下面的邮箱也差不多
 
-```git config --global user.email "<邮箱>"```
+```git config --global user.email "<邮箱>"```  
 这个配置是写你邮箱，不过一般写邮箱的话还是写你代码托管网站的邮箱
 
 ```git init```  
