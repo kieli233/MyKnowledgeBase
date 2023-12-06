@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    min-width: 1000px;
+    min-height: 500px;
+    background: url(../picture/register.png) no-repeat center/cover;
+}
+
+.window {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(219, 255, 253,0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+}
+
+.Rimg {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Rimg p {
+    font-size: 30px;
+    height: 40px;
+}
+
+.Rimg img {
+    width: 330px;
+    height: 330px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#skipbox {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+#skipbox a {
+    margin: 3px;
+    width: calc(33.33% - 25px);
+    text-align: center;
+    text-decoration: none;
+    color: rgb(14, 145, 233);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#skipbox a:first-child {
+    margin-left: 25px;
+}
+
+#skipbox a:last-child {
+    margin-right: 25px;
+}
+
+.ContentR {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    flex-direction: column;
+    background-color: rgba(219, 244, 250, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.ContentR tr {
+    display: flex;
+    width: 390px;
+    height: 30px;
+    justify-content: space-between;
+    margin: 2px;
+}
+.ContentR p {
+    font-weight: 650;
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+}
+
+#userd, #usernumber, #pd, #cp {
+    display: flex;
+    width: 180px;
+    height: 30px;
+    position: relative;
+}
+
+#user, #number, #password, #ConfirmPassword {
+    width: 176px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.ContentR tr td label{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 20px;
+}
+
+#qy {
+    width: 70px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#ph {
+    width: 176px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+}
+
+#ESserver {
+    width: 200px;
+}
+
+#oc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm {
+    width: 70px;
+    height: 25px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

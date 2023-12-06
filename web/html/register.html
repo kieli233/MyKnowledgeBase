@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script type="text/javascript" src="../js/register.js"></script>
+</head>
+<body>
+    <div class="window">
+        <div class="Rimg">
+            <p>注册</p>
+            <img src="../picture/userindex.jpg" alt="img" id="userimg">
+            <div id="skipbox">
+                <a href="login.html">登录</a>
+                <a href="../index.html">主页</a>
+                <a href="forget.html">忘记密码</a>
+            </div>
+        </div>
+        <form action="../php/register.php" method="post" enctype="multipart/form-data">
+            <div class="ContentR">
+                <table id="tables">
+                    <tr><td><p>用户名与账号</p></td></tr>
+                    <tr>
+                        <td id="userd">
+                            <input type="text" name="UserName" id="user" required>
+                            <label id="lname">昵称:</label>
+                        </td>
+                        <td id="usernumber">
+                            <input type="text" name="AccountNumber" id="number" required>
+                            <label id="lnumber">账号:</label>
+                        </td>
+                    </tr>
+                    <tr><td><p>密码：</p></td></tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="password" name="password" id="password" required>
+                            <label id="lpd">密码:</label>
+                        </td>   
+                        <td id="cp">
+                            <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
+                            <label id="lcp">确定密码:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>手机</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="qy" name="phonecode">
+                                <option value="86">+86</option>
+                                <option value="886">+886</option>
+                                <option value="852">+852</option>
+                                <option value="853">+853</option>
+                            </select>
+                            <input type="text" id="ph" name="phone" required>
+                        </td>
+                    </tr>
+                    <tr><td><p>图片</p></td></tr>
+                    <tr>
+                        <td><input type="file" onchange="previewFile()" id="file" name="file" required></td>
+                    </tr>
+                    <tr><td><p>服务项</p></td></tr>
+                    <tr>
+                        <td>我们为您提供推广服务: </td>
+                        <td id="ESserver">同意<input type="radio" name="Es" value="yes" checked>&nbsp;&nbsp; 不同意:<input type="radio" name="Es" value="no"></td>
+                    </tr> 
+                    <tr><td><input type="checkbox" name="uap[]" value="同意用户协议" required><a href="#">用户协议</a>和<input type="checkbox" name="uap[]" value="同意隐私政策" required><a href="#">隐私政策</a></td></tr>
+                    <tr><td id="oc"><input type="submit"  value="注册" id="confirm"></td></tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

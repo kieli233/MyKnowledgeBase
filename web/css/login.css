@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background: url(../picture/login.png) no-repeat center/cover;
+}
+.login-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    border-radius: 30px;
+    padding: 40px;
+    background-color: rgb(25, 51, 85, 0.5);
+}
+h1{
+    color:rbg #17bbc7;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color:#00ffff;
+}
+.input-box{
+    position: relative;
+}
+.input-box input{
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #00ffff;
+}
+label{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: pink;
+    transition: 0.6s;
+}
+.input-box input:focus+label,
+.input-box input:valid+label{
+    top: -8px;
+    font-size: 12px;
+    color:#00ffff;
+}
+input[type="submit"]{
+    position: absolute;
+    text-align: center;
+    color:rgb(218, 180, 186);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    font-size: 20px;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bottom a {
+    font-size: 16px;
+    color: pink;
+    text-align: center;
+    text-decoration: none;
+}

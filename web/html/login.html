@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>登陆</title>
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+    <body>
+        <form action="../php/login.php" method="post">
+            <div class="login-wrap">
+                <h1>登录</h1>
+                <div class="input-box">
+                    <input id="in" type="text" name="user" required>
+                    <label for="in">账号:</label>
+                </div>
+                <div class="input-box">
+                    <input id="to" type="password" name="password" required>
+                    <label for="to">密码:</label>
+                </div>
+                <input type="submit" value="登录">
+                <div id="bottom">
+                    <p><a href="register.html">注册</a></p>
+                    <p><a href="forget.html">忘记密码</a></p>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
