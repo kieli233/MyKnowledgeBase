@@ -1,8 +1,16 @@
 var getcookie = document.cookie;
-var simolifycookie = getcookie.substring(getcookie.indexOf(';')+1);
-simolifycookie = simolifycookie.replace(/=/g,';');
+var simolifycookie = getcookie.replace(/=/g,';');
+simolifycookie = simolifycookie.replace(/[\t\r\f\n\s]/g,'');
 const arr = simolifycookie.split(';');
-const dict = { 'name': arr[1] , 'img': arr[3]}
+var dict = { 'name': " " , 'img': undefined}
+for( i = 0;i < arr.length; i++){
+    if('name' === arr[i]){
+        dict['name'] = arr[i+1];
+    }
+    if('img'===arr[i]){
+        dict['img'] = arr[i+1];
+    }
+}
 
 window.onload = function() {
     var username = document.getElementById("username");
