@@ -44,7 +44,7 @@ forget.html -> forget.php -> login.html
 ![后果](/img/php不执行关闭sql连接的后果.png)
 
 ### 文件结构
-![文件结构](/img/web文件结构.png)
+![文件结构](/img/web文件结构.png)  
 web  
 +-- css  
 +-/ 页面样式文件夹  
