@@ -2,3 +2,11 @@
 
 开摆  
 ![没救了](/img/meijiule.jpg)  
+
+
+
+\[ 上传说明 \]
+
+**upfile** : 上传文件  
+**update** : 更新文件  
+**uperror** : 修复错误  
